@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SCENTÉ Perfume — luxury-inspired fragrances and personalized perfume bar souvenirs.">
+<title>SCENTÉ Perfume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="shipping-bar">FREE SHIPPING ON ORDERS ₱999+ ♥</div>
+
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="SCENTÉ home">
+    <span>SCENTÉ</span><small>PERFUME</small>
+  </a>
+
+  <nav class="desktop-nav">
+    <a href="#home">HOME</a>
+    <a href="#shop">SHOP <span>⌄</span></a>
+    <a href="#perfume-bar">PERFUME BAR <span>⌄</span></a>
+    <a href="#about">ABOUT US</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+
+  <div class="header-actions">
+    <button class="icon-btn" id="accountBtn" aria-label="Account">♙</button>
+    <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+    <button class="icon-btn cart-btn" id="cartBtn" aria-label="Shopping cart">♧<b id="cartCount">0</b></button>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#home">HOME</a>
+  <a href="#shop">SHOP</a>
+  <a href="#perfume-bar">PERFUME BAR</a>
+  <a href="#about">ABOUT US</a>
+  <a href="#contact">CONTACT</a>
+</div>
+
+<div class="search-panel" id="searchPanel">
+  <div class="search-inner">
+    <input id="searchInput" type="search" placeholder="Search perfumes..." autocomplete="off">
+    <button id="closeSearch">×</button>
+  </div>
+  <div id="searchResults" class="search-results"></div>
+</div>
+
+<main id="home">
+
+<section class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">YOUR SCENT. YOUR STORY.</p>
+    <h1>EXPERIENCE</h1>
+    <div class="script">made memorable.</div>
+    <p class="hero-copy">Luxury inspired perfumes for everyday you and personalized perfume bar souvenirs for your special events.</p>
+    <div class="hero-buttons">
+      <a class="btn dark" href="#shop">SHOP RETAIL</a>
+      <a class="btn light" href="#perfume-bar">PERFUME BAR SOUVENIRS</a>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div><i>♧</i><div><strong>QUALITY SCENTS</strong><p>Premium fragrance oils from trusted suppliers.</p></div></div>
+  <div><i>♢</i><div><strong>LONG LASTING</strong><p>Made to last all day with good projection &amp; sillage.</p></div></div>
+  <div><i>♧</i><div><strong>PERFECT FOR ANY OCCASION</strong><p>Everyday wear or special events.</p></div></div>
+  <div><i>♡</i><div><strong>MADE WITH LOVE</strong><p>Handcrafted with care for you and your loved ones.</p></div></div>
+</section>
+
+<section class="products-section" id="shop">
+  <div class="section-heading">
+    <div><p class="eyebrow">OUR COLLECTION</p><h2>Shop Our Bestsellers</h2></div>
+    <button class="outline-btn" id="viewAllBtn">VIEW ALL PRODUCTS</button>
+  </div>
+  <div class="filter-row" id="filterRow">
+    <button class="filter active" data-filter="all">All</button>
+    <button class="filter" data-filter="floral">Floral</button>
+    <button class="filter" data-filter="fresh">Fresh</button>
+    <button class="filter" data-filter="warm">Warm</button>
+    <button class="filter" data-filter="powdery">Powdery</button>
+  </div>
+  <div class="products" id="productGrid"></div>
+</section>
+
+<section class="promo" id="perfume-bar">
+  <div class="promo-card promo-one">
+    <div>
+      <p class="eyebrow">PERFUME BAR</p>
+      <h2>Souvenirs for<br>Every Occasion</h2>
+      <p>Make your events extra memorable with personalized perfume bar souvenirs your guests will love.</p>
+      <button class="btn dark" data-inquiry="Perfume Bar Souvenirs">INQUIRE NOW</button>
+    </div>
+  </div>
+  <div class="promo-card promo-two">
+    <div>
+      <p class="eyebrow">PERFUME BAR SETUP</p>
+      <h2>We Bring the<br>Scent Experience<br>to You</h2>
+      <p>Fun and interactive way for your guests to create their own signature scents to take home.</p>
+      <button class="btn dark" data-inquiry="Perfume Bar Setup">BOOK NOW</button>
+    </div>
+  </div>
+</section>
+
+<section class="benefits">
+  <div><i>♢</i><strong>SECURE PAYMENT</strong><p>Your transactions are safe with us.</p></div>
+  <div><i>♧</i><strong>FAST DELIVERY</strong><p>Quick and reliable nationwide shipping.</p></div>
+  <div><i>♡</i><strong>WE'RE HERE TO HELP</strong><p>Message us anytime for questions &amp; support.</p></div>
+  <div><i>☆</i><strong>LOVED BY MANY</strong><p>Trusted by hundreds of happy customers.</p></div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-image"></div>
+  <div class="about-copy">
+    <p class="eyebrow">ABOUT SCENTÉ</p>
+    <h2>Your scent,<br>your story.</h2>
+    <p>SCENTÉ is a perfume experience built around everyday confidence, beautiful moments, and thoughtful gifting. Explore our signature-inspired scents or create a memorable perfume bar experience for your next event.</p>
+    <a href="#contact" class="btn dark">TALK TO US</a>
+  </div>
+</section>
+
+<section class="instagram">
+  <div class="instagram-head">
+    <div><p class="eyebrow">FOLLOW US ON INSTAGRAM</p><h3>@scente.perfume</h3></div>
+    <a class="outline-btn" href="https://www.instagram.com/" target="_blank" rel="noopener">FOLLOW US</a>
+  </div>
+  <div class="instagram-grid">
+    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=700&q=80" alt="Perfume bottles">
+    <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=700&q=80" alt="Perfume display">
+    <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=700&q=80" alt="Perfume bottle">
+    <img src="https://images.unsplash.com/photo-1557170334-a9632e77c6e4?auto=format&fit=crop&w=700&q=80" alt="Fragrance">
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div>
+    <p class="eyebrow">GET IN TOUCH</p>
+    <h2>Let's create<br>something memorable.</h2>
+    <p>Have a question, want to order, or planning a perfume bar event? Send us a message.</p>
+  </div>
+  <form id="contactForm">
+    <input name="name" required placeholder="Your name">
+    <input name="email" type="email" required placeholder="Email address">
+    <textarea name="message" required rows="5" placeholder="How can we help?"></textarea>
+    <button class="btn dark" type="submit">SEND MESSAGE</button>
+    <p class="form-message" id="contactMessage"></p>
+  </form>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-brand">SCENTÉ <small>PERFUME</small></div>
+  <div class="footer-links"><a href="#shop">Shop</a><a href="#perfume-bar">Perfume Bar</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+  <p>© 2026 SCENTÉ PERFUME. All rights reserved.</p>
+</footer>
+
+<!-- Product modal -->
+<div class="modal" id="productModal">
+  <div class="modal-card">
+    <button class="modal-close" data-close="productModal">×</button>
+    <div class="modal-product">
+      <img id="modalImage" src="" alt="">
+      <div>
+        <p class="eyebrow" id="modalType"></p>
+        <h2 id="modalName"></h2>
+        <p id="modalDescription"></p>
+        <strong id="modalPrice"></strong>
+        <div class="quantity">
+          <button id="modalMinus">−</button><span id="modalQty">1</span><button id="modalPlus">+</button>
+        </div>
+        <button class="btn dark full" id="modalAdd">ADD TO CART</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cart drawer -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="drawer-head"><h2>Your Cart</h2><button id="closeCart">×</button></div>
+  <div id="cartItems"></div>
+  <div class="cart-empty" id="cartEmpty">Your cart is empty.</div>
+  <div class="cart-summary">
+    <div><span>Subtotal</span><strong id="cartSubtotal">₱0.00</strong></div>
+    <small>Shipping is free for orders ₱999+.</small>
+    <button class="btn dark full" id="checkoutBtn">CHECKOUT</button>
+  </div>
+</aside>
+
+<!-- Checkout modal -->
+<div class="modal" id="checkoutModal">
+  <div class="modal-card checkout-card">
+    <button class="modal-close" data-close="checkoutModal">×</button>
+    <p class="eyebrow">CHECKOUT</p>
+    <h2>Complete Your Order</h2>
+    <div id="checkoutSummary"></div>
+    <form id="checkoutForm">
+      <input name="customer" required placeholder="Full name">
+      <input name="phone" required placeholder="Phone number">
+      <input name="email" type="email" required placeholder="Email address">
+      <textarea name="address" required rows="3" placeholder="Delivery address"></textarea>
+      <select name="payment" required>
+        <option value="">Select payment method</option>
+        <option>Cash on Delivery</option>
+        <option>GCash</option>
+        <option>Bank Transfer</option>
+      </select>
+      <button class="btn dark full" type="submit">PLACE ORDER</button>
+      <p class="form-message" id="checkoutMessage"></p>
+    </form>
+  </div>
+</div>
+
+<!-- Account modal -->
+<div class="modal" id="accountModal">
+  <div class="modal-card small-modal">
+    <button class="modal-close" data-close="accountModal">×</button>
+    <p class="eyebrow">MY ACCOUNT</p>
+    <h2>Welcome to SCENTÉ</h2>
+    <p class="muted">This demo stores your cart locally in your browser. Connect this form to your real customer/account system when you add a backend.</p>
+    <input id="accountEmail" type="email" placeholder="Email address">
+    <button class="btn dark full" id="accountContinue">CONTINUE</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
