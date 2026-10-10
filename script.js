@@ -123,18 +123,6 @@ document.querySelectorAll(".modal").forEach(m=>m.addEventListener("click",e=>{if
 $("menuBtn").addEventListener("click",()=>$("mobileNav").classList.toggle("open"));
 document.querySelectorAll(".mobile-nav a").forEach(a=>a.addEventListener("click",()=>$("mobileNav").classList.remove("open")));
 
-$("searchBtn").addEventListener("click",()=>{
-  $("searchPanel").classList.add("open");$("searchInput").focus();renderSearch("");
-});
-$("closeSearch").addEventListener("click",()=>$("searchPanel").classList.remove("open"));
-$("searchInput").addEventListener("input",e=>renderSearch(e.target.value));
-
-function renderSearch(q){
-  const term=q.trim().toLowerCase();
-  const list=products.filter(p=>!term||p.name.toLowerCase().includes(term)||p.type.toLowerCase().includes(term));
-  $("searchResults").innerHTML=list.slice(0,6).map(p=>`<div class="search-result" onclick="openProduct(${p.id});$('searchPanel').classList.remove('open')"><img src="${p.image}" alt="${p.name}"><strong>${p.name}</strong><small>${money(p.price)}</small></div>`).join("")||"<p>No perfumes found.</p>";
-}
-
 $("accountBtn").addEventListener("click",()=>$("accountModal").classList.add("open"));
 $("accountContinue").addEventListener("click",()=>{
   const email=$("accountEmail").value.trim();
@@ -164,27 +152,3 @@ $("checkoutForm").addEventListener("submit",e=>{
 
 renderProducts();
 updateCartUI();
-
-(() => {
-  const searchBtn = document.getElementById("searchBtn");
-
-  if (!searchBtn) return;
-
-  let lastScrollY = window.scrollY;
-
-  window.addEventListener(
-    "scroll",
-    () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > 100 && currentScrollY > lastScrollY) {
-        searchBtn.classList.add("search-hidden");
-      } else {
-        searchBtn.classList.remove("search-hidden");
-      }
-
-      lastScrollY = currentScrollY;
-    },
-    { passive: true }
-  );
-})();
