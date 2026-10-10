@@ -164,3 +164,27 @@ $("checkoutForm").addEventListener("submit",e=>{
 
 renderProducts();
 updateCartUI();
+
+(() => {
+  const searchBtn = document.getElementById("searchBtn");
+
+  if (!searchBtn) return;
+
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > 100 && currentScrollY > lastScrollY) {
+        searchBtn.classList.add("search-hidden");
+      } else {
+        searchBtn.classList.remove("search-hidden");
+      }
+
+      lastScrollY = currentScrollY;
+    },
+    { passive: true }
+  );
+})();
