@@ -154,62 +154,42 @@ document.querySelectorAll("[data-inquiry]").forEach(btn=>btn.addEventListener("c
   document.querySelector("#contact").scrollIntoView({behavior:"smooth"});
 }));
 
-```javascript
-$("contactForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
+const form = document.getElementById('form');
+const submitBtn = form.querySelector('button[type="submit"]');
 
-  const form = e.target;
-  const message = $("contactMessage");
-  const button = form.querySelector('button[type="submit"]');
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-  // Prevent duplicate submissions
-  if (button.disabled) return;
-
-  button.disabled = true;
-  button.textContent = "Sending...";
-  message.textContent = "";
-
-  try {
     const formData = new FormData(form);
+    formData.append("access_key", "3d82b345-6480-47b2-a8b1-786ad7a387d9");
 
-    // Use the access key from your HTML form.
-    // Add it here only if the form doesn't already contain it.
-    if (!formData.has("access_key")) {
-      formData.append(
-        "access_key",
-        "3d82b345-6480-47b2-a8b1-786ad7a387d9"
-      );
+    const originalText = submitBtn.textContent;
+
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            alert("Success! Your message has been sent.");
+            form.reset();
+        } else {
+            alert("Error: " + data.message);
+        }
+
+    } catch (error) {
+        alert("Something went wrong. Please try again.");
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
     }
-
-    const response = await fetch(
-      "https://api.web3forms.com/submit",
-      {
-        method: "POST",
-        body: formData
-      }
-    );
-
-    const result = await response.json();
-
-    if (response.ok && result.success) {
-      window.location.href = "success.html";
-      return;
-    }
-
-    message.textContent =
-      result.message ||
-      "Sorry, your message could not be sent. Please try again.";
-
-  } catch (error) {
-    message.textContent =
-      "A connection error occurred. Please check your internet and try again.";
-  } finally {
-    button.disabled = false;
-    button.textContent = "Send Message";
-  }
 });
-```
-
 $("checkoutForm").addEventListener("submit",e=>{
   e.preventDefault();
   const orderNo="SC-"+Date.now().toString().slice(-7);
