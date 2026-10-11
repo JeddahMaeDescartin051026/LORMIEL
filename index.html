@@ -135,44 +135,18 @@
     <p>Have a question, want to order, or planning a perfume bar event? Send us a message.</p>
   </div>
   
-<form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-
-    <!-- Web3Forms Access Key -->
-    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-
-    <!-- Email Subject -->
-    <input type="hidden" name="subject" value="New Message from SCENTÉ Website">
-
-    <!-- Name -->
-    <label for="name">Your Name</label>
-    <input
-        type="text"
-        id="name"
-        name="name"
-        placeholder="Enter your name"
-        required
-    >
-
-    <!-- Social Media Account -->
-    <label for="social-media">Social Media Account</label>
-    <input
-        type="text"
-        id="social-media"
-        name="social_media"
-        placeholder="e.g., Instagram @username or Facebook profile"
-        required
-    >
-
-    <!-- Message -->
-    <label for="message">Your Message</label>
-    <textarea
-        id="message"
-        name="message"
-        placeholder="How can we help you?"
-        required
-    ></textarea>
-
-    <button type="submit">Send Message</button>
+<form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="3d82b345-6480-47b2-a8b1-786ad7a387d9">
+  <input type="text" name="name" required>
+  <input
+    type="text"
+    id="social-media"
+    name="social_media"
+    placeholder="Enter your social media account"
+    required
+>
+  <textarea name="message" required></textarea>
+  <button type="submit">Submit</button>
 </form>
   
 </section>
