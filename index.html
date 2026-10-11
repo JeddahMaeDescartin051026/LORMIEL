@@ -134,53 +134,38 @@
     <h2>Let's create<br>something memorable.</h2>
     <p>Have a question, want to order, or planning a perfume bar event? Send us a message.</p>
   </div>
-  ```html
-<form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+  
+<form action="https://api.web3forms.com/submit" method="POST">
 
-  <!-- Web3Forms Access Key -->
   <input
     type="hidden"
     name="access_key"
-    value="eb96819d-fa60-42aa-82bc-1e6394e1e9e9"
+    value="YOUR_ACCESS_KEY"
   >
 
-  <!-- Email Subject -->
   <input
     type="hidden"
-    name="subject"
-    value="New Contact Message - SCENTÉ Perfume"
+    name="redirect"
+    value="https://YOUR-WEBSITE-URL.com/"
   >
 
-  <!-- Customer Name -->
-  <input
-    type="text"
-    name="name"
-    placeholder="Your Name"
-    required
-  >
+<input type="text" name="name" placeholder="Your Name" required>
 
-  <!-- Customer Email -->
-  <input
-    type="email"
-    name="email"
-    placeholder="Your Email"
-    required
-  >
+<input
+  type="text"
+  name="social_media"
+  placeholder="Your Social Media Account (e.g., Facebook or Instagram)"
+  required
+>
 
-  <!-- Customer Message -->
-  <textarea
-    name="message"
-    placeholder="Your Message"
-    required
-  ></textarea>
+<textarea name="message" placeholder="Your Message" required></textarea>
 
   <button type="submit">Send Message</button>
 
-  <!-- Form Status Message -->
-  <p class="form-message" id="contactMessage"></p>
+</form>
 
 </form>
-```
+  
 </section>
 
 </main>
