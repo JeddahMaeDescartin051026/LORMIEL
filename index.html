@@ -135,35 +135,44 @@
     <p>Have a question, want to order, or planning a perfume bar event? Send us a message.</p>
   </div>
   
-<form action="https://api.web3forms.com/submit" method="POST">
+<form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
 
-  <input
-    type="hidden"
-    name="access_key"
-    value="YOUR_ACCESS_KEY"
-  >
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
 
-  <input
-    type="hidden"
-    name="redirect"
-    value="https://YOUR-WEBSITE-URL.com/"
-  >
+    <!-- Email Subject -->
+    <input type="hidden" name="subject" value="New Message from SCENTÉ Website">
 
-<input type="text" name="name" placeholder="Your Name" required>
+    <!-- Name -->
+    <label for="name">Your Name</label>
+    <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your name"
+        required
+    >
 
-<input
-  type="text"
-  name="social_media"
-  placeholder="Your Social Media Account (e.g., Facebook or Instagram)"
-  required
->
+    <!-- Social Media Account -->
+    <label for="social-media">Social Media Account</label>
+    <input
+        type="text"
+        id="social-media"
+        name="social_media"
+        placeholder="e.g., Instagram @username or Facebook profile"
+        required
+    >
 
-<textarea name="message" placeholder="Your Message" required></textarea>
+    <!-- Message -->
+    <label for="message">Your Message</label>
+    <textarea
+        id="message"
+        name="message"
+        placeholder="How can we help you?"
+        required
+    ></textarea>
 
-  <button type="submit">Send Message</button>
-
-</form>
-
+    <button type="submit">Send Message</button>
 </form>
   
 </section>
