@@ -162,25 +162,44 @@ $("contactForm").addEventListener("submit", async (e) => {
   const message = $("contactMessage");
   const button = form.querySelector('button[type="submit"]');
 
+  // Prevent duplicate submissions
+  if (button.disabled) return;
+
   button.disabled = true;
   button.textContent = "Sending...";
   message.textContent = "";
 
   try {
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: new FormData(form)
-    });
+    const formData = new FormData(form);
+
+    // Use the access key from your HTML form.
+    // Add it here only if the form doesn't already contain it.
+    if (!formData.has("access_key")) {
+      formData.append(
+        "access_key",
+        "3d82b345-6480-47b2-a8b1-786ad7a387d9"
+      );
+    }
+
+    const response = await fetch(
+      "https://api.web3forms.com/submit",
+      {
+        method: "POST",
+        body: formData
+      }
+    );
 
     const result = await response.json();
 
     if (response.ok && result.success) {
-      message.textContent = "Thank you! Your message has been sent successfully.";
-      form.reset();
-    } else {
-      message.textContent =
-        result.message || "Sorry, your message could not be sent. Please try again.";
+      window.location.href = "success.html";
+      return;
     }
+
+    message.textContent =
+      result.message ||
+      "Sorry, your message could not be sent. Please try again.";
+
   } catch (error) {
     message.textContent =
       "A connection error occurred. Please check your internet and try again.";
