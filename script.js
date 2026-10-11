@@ -154,7 +154,7 @@ document.querySelectorAll("[data-inquiry]").forEach(btn=>btn.addEventListener("c
   document.querySelector("#contact").scrollIntoView({behavior:"smooth"});
 }));
 
-const form = document.getElementById('form');
+const form = document.getElementById('contactForm');
 const submitBtn = form.querySelector('button[type="submit"]');
 
 form.addEventListener('submit', async (e) => {
