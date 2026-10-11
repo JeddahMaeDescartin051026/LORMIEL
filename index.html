@@ -135,13 +135,96 @@
     <p>Have a question, want to order, or planning a perfume bar event? Send us a message.</p>
   </div>
   
-<form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="3d82b345-6480-47b2-a8b1-786ad7a387d9">
-  <input type="text" name="name" required>
-  <input type="text" name="social_media" required>
-  <textarea name="message" required></textarea>
-  <button type="submit">Submit</button>
+<form
+  id="contactForm"
+  action="https://api.web3forms.com/submit"
+  method="POST"
+>
+  <!-- Web3Forms Access Key -->
+  <input
+    type="hidden"
+    name="access_key"
+    value="3d82b345-6480-47b2-a8b1-786ad7a387d9"
+  >
+
+  <!-- Subject -->
+  <input
+    type="hidden"
+    name="subject"
+    value="New Contact Message - SCENTÉ"
+  >
+
+  <!-- Name -->
+  <label for="name">Your Name</label>
+  <input
+    type="text"
+    id="name"
+    name="name"
+    placeholder="Enter your name"
+    required
+  >
+
+  <!-- Email -->
+  <label for="email">Your Email</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="Enter your email address"
+    required
+  >
+
+  <!-- Social Media Account -->
+  <label for="social_media">Facebook or Instagram Account</label>
+  <input
+    type="text"
+    id="social_media"
+    name="social_media"
+    placeholder="Facebook name or Instagram @username"
+    required
+  >
+
+  <!-- Message -->
+  <label for="message">Your Message</label>
+  <textarea
+    id="message"
+    name="message"
+    placeholder="How can we help you?"
+    rows="5"
+    required
+  ></textarea>
+
+  <!-- Submit Button -->
+  <button type="submit">Send Message</button>
+
 </form>
+
+<!-- Direct Messenger Contact -->
+<div class="direct-contact">
+  <p>Or reach us directly via Messenger</p>
+
+  <a
+    href="https://m.me/YOUR_PAGE_USERNAME"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="messenger-link"
+    aria-label="Contact SCENTÉ on Facebook Messenger"
+  >
+    <!-- Facebook Messenger Icon -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M12 2C6.48 2 2 6.15 2 11.27c0 2.92 1.46 5.52 3.74 7.24V22l3.41-1.87c.91.25 1.86.39 2.85.39 5.52 0 10-4.15 10-9.25S17.52 2 12 2zm1 12.45-2.55-2.72-4.98 2.72 5.48-5.82 2.62 2.72 4.91-2.72L13 14.45z"/>
+    </svg>
+
+    <span>Message Us on Facebook</span>
+  </a>
+</div>
   
 </section>
 
