@@ -154,35 +154,6 @@ document.querySelectorAll("[data-inquiry]").forEach(btn=>btn.addEventListener("c
   document.querySelector("#contact").scrollIntoView({behavior:"smooth"});
 }));
 
-const products=[
-{id:1,name:"BLOOM",type:"Floral · Fresh",category:["floral","fresh"],price:499,image:"https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=700&q=80",description:"A fresh floral fragrance designed for bright, everyday moments."},
-{id:2,name:"LOVELY",type:"Powdery · Musk",category:["powdery"],price:499,image:"https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=700&q=80",description:"Soft powdery notes balanced with a clean, comforting musk."},
-{id:3,name:"AMBERY",type:"Warm · Sweet",category:["warm"],price:499,image:"https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=700&q=80",description:"Warm amber tones with a sweet, inviting character." ,badge:"BEST SELLER"},
-{id:4,name:"OCEAN",type:"Fresh · Aquatic",category:["fresh"],price:499,image:"https://images.unsplash.com/photo-1557170334-a9632e77c6e4?auto=format&fit=crop&w=700&q=80",description:"A crisp aquatic scent with a clean, refreshing finish."},
-{id:5,name:"SERENITY",type:"Fruity · Floral",category:["floral"],price:499,image:"https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=700&q=80",description:"A gentle fruity-floral blend made for calm, elegant days."},
-{id:6,name:"NOIR",type:"Woody · Warm",category:["warm"],price:549,image:"https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=700&q=80",description:"A deeper woody fragrance with a warm, sophisticated character."},
-{id:7,name:"PETAL",type:"Floral · Soft",category:["floral"],price:499,image:"https://images.unsplash.com/photo-1563170351-be82bc888aa4?auto=format&fit=crop&w=700&q=80",description:"Delicate floral notes with a soft and feminine finish."},
-{id:8,name:"AQUA",type:"Fresh · Clean",category:["fresh"],price:499,image:"https://images.unsplash.com/photo-1587017539504-67cfbddac569?auto=format&fit=crop&w=700&q=80",description:"A clean, airy fragrance inspired by fresh water and open skies."},
-  {
-  id: 9,
-  name: "VELVET",
-  type: "Floral · Woody",
-  category: ["floral", "warm"],
-  price: 499,
-  image: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=700&q=80",
-  description: "An elegant fragrance combining delicate florals with warm, woody notes."
-},
-  {
-  id: 10,
-  name: "VELVET",
-  type: "Floral · Woody",
-  category: ["floral", "warm"],
-  price: 499,
-  image: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=700&q=80",
-  description: "An elegant fragrance combining delicate florals with warm, woody notes."
-}
-];
-
 let cart=JSON.parse(localStorage.getItem("scenteCart")||"[]");
 let activeFilter="all";
 let modalProduct=null;
