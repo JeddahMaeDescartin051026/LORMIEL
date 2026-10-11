@@ -154,11 +154,42 @@ document.querySelectorAll("[data-inquiry]").forEach(btn=>btn.addEventListener("c
   document.querySelector("#contact").scrollIntoView({behavior:"smooth"});
 }));
 
-$("contactForm").addEventListener("submit",e=>{
+```javascript
+$("contactForm").addEventListener("submit", async (e) => {
   e.preventDefault();
-  $("contactMessage").textContent="Thank you! Your message has been prepared. Connect this form to your email service/backend to receive submissions.";
-  e.target.reset();
+
+  const form = e.target;
+  const message = $("contactMessage");
+  const button = form.querySelector('button[type="submit"]');
+
+  button.disabled = true;
+  button.textContent = "Sending...";
+  message.textContent = "";
+
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form)
+    });
+
+    const result = await response.json();
+
+    if (response.ok && result.success) {
+      message.textContent = "Thank you! Your message has been sent successfully.";
+      form.reset();
+    } else {
+      message.textContent =
+        result.message || "Sorry, your message could not be sent. Please try again.";
+    }
+  } catch (error) {
+    message.textContent =
+      "A connection error occurred. Please check your internet and try again.";
+  } finally {
+    button.disabled = false;
+    button.textContent = "Send Message";
+  }
 });
+```
 
 $("checkoutForm").addEventListener("submit",e=>{
   e.preventDefault();
