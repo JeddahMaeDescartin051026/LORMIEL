@@ -7,13 +7,13 @@ const products=[
 {id:6,name:"NOIR",type:"Woody · Warm",category:["warm"],price:549,image:"https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=700&q=80",description:"A deeper woody fragrance with a warm, sophisticated character."},
 {id:7,name:"PETAL",type:"Floral · Soft",category:["floral"],price:499,image:"https://images.unsplash.com/photo-1563170351-be82bc888aa4?auto=format&fit=crop&w=700&q=80",description:"Delicate floral notes with a soft and feminine finish."},
 {id:8,name:"AQUA",type:"Fresh · Clean",category:["fresh"],price:499,image:"https://images.unsplash.com/photo-1587017539504-67cfbddac569?auto=format&fit=crop&w=700&q=80",description:"A clean, airy fragrance inspired by fresh water and open skies."},
-  {
+ {
   id: 9,
   name: "VELVET",
   type: "Floral · Woody",
   category: ["floral", "warm"],
   price: 499,
-  image: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=700&q=80",
+  image: "https://cdn.pixabay.com/photo/2023/06/01/06/21/perfume-8032808_1280.jpg",
   description: "An elegant fragrance combining delicate florals with warm, woody notes."
 },
   {
@@ -22,7 +22,7 @@ const products=[
   type: "Floral · Woody",
   category: ["floral", "warm"],
   price: 499,
-  image: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=700&q=80",
+  image: "https://images.pexels.com/photos/1961791/pexels-photo-1961791.jpeg?cs=srgb&dl=pexels-valeria-boltneva-1961791.jpg&fm=jpg",
   description: "An elegant fragrance combining delicate florals with warm, woody notes."
 }
 ];
